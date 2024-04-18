@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Rozarpay</title>
+</head>
+<body>
+    <nav class="bg-deepBlue px-4">
+        <div class=" max-w-5xl mx-auto flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a class="cursor-pointer py-7" href=""><img class="w-[125px] h-[30px]" src="./assets/logo.svg" alt=""></a>
+            
+            <ul class=" items-center gap-6 hidden md:hidden lg:flex">
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                    <a href="#">Payments</a>
+                    <div class="absolute bottom-0 h-1 w-full bg-lightBlue hidden group-hover:block"></div>
+                </li>
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                    <a href="#">Banking</a>
+                    <div class="absolute bottom-0 h-1 w-full bg-lightBlue hidden group-hover:block"></div>
+                </li>
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                    <a href="#">Corporate Card</a>
+                </li>
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                    <a href="#">Payroll</a>
+                </li>
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                    <a href="#">Resources</a>
+                    <div class="absolute bottom-0 h-1 w-full bg-lightBlue hidden group-hover:block"></div>
+                </li>
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                    <a href="#">Support</a>
+                    <div class="absolute bottom-0 h-1 w-full bg-lightBlue hidden group-hover:block"></div>
+                </li>
+                <li class="text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                    <a href="#">Pricing</a>
+                    <div class="absolute bottom-0 h-1 w-full bg-lightBlue hidden group-hover:block"></div>
+                </li>
+            </ul>
+            <div class="flex gap-3 items-center">
+                <img class="w-[28px] h-[20px]" src="./assets/india-flag.svg" alt="">
+                <button class="py-2 px-3 font-mullish text-white border-[1px] border-lightBlue rounded text-sm font-bold">Log in</button>
+                <button class="hidden lg:block py-2 px-4 bg-white font-mullish text-lightBlue300 rounded  text-sm hover:text-lightBlue500 transition duration-200 font-bold">Sign Up <i class="fa-solid fa-arrow-right"></i></button>
+                <button class="p-2 lg:hidden">
+                    <span onclick="handleMenu()"><i class="fa-solid fa-bars text-white text-lg"></i></span>
+                </button>
+            </div>
+            <div id="nav-dailog" class="hidden fixed z-10 lg:hidden inset-0 bg-deepBlue">
+                <div id="nav-bar" class="flex justify-between items-center px-4 h-auto">
+                    <a class="cursor-pointer py-7" href=""><img class="w-[125px] h-[30px]" src="./assets/logo.svg" alt=""></a>
+                    <button class="p-2 lg:hidden">
+                        <span onclick="handleMenu()"><i class="fa-solid fa-xmark text-white text-lg"></i></span>
+                    </button>
+                </div>
+                <ul class="flex flex-col px-14 gap-1">
+                    <li class="text-white font-mullish py-5 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                        <a href="#">Payments</a>
+                        <div class="absolute bottom-0 h-1 w-full bg-lightBlue hidden group-hover:block"></div>
+                    </li>
+                    <li class="text-white font-mullish py-5 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                        <a href="#">Banking</a>
+                        <div class="absolute bottom-0 h-1 w-full bg-lightBlue hidden group-hover:block"></div>
+                    </li>
+                    <li class="text-white font-mullish py-5 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                        <a href="#">Corporate Card</a>
+                    </li>
+                    <li class="text-white font-mullish py-5 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                        <a href="#">Payroll</a>
+                    </li>
+                    <li class="text-white font-mullish py-5 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                        <a href="#">Resources</a>
+                        <div class="absolute bottom-0 h-1 w-full bg-lightBlue hidden group-hover:block"></div>
+                    </li>
+                    <li class="text-white font-mullish py-5 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                        <a href="#">Support</a>
+                        <div class="absolute bottom-0 h-1 w-full bg-lightBlue hidden group-hover:block"></div>
+                    </li>
+                    <li class="text-white font-mullish py-5 hover:text-lightBlue cursor-pointer transition-all relative duration-200 group">
+                        <a href="#">Pricing</a>
+                        <div class="absolute bottom-0 h-1 w-full bg-lightBlue hidden group-hover:block"></div>
+                    </li>
+                    <li>
+                        <button class="lg:block py-2 px-4 bg-white font-mullish text-lightBlue300 rounded  text-sm hover:text-lightBlue500 transition duration-200 font-bold">Sign Up <i class="fa-solid fa-arrow-right"></i></button>
+                    </li>
+                </ul>
+               
+                
+                
+                <!-- <div class="h-[0.5px] bg-gray-300 mx-4 my-2"></div>
+                <button
+                    class=" mx-11 my-8 flex gap-2 items-center border hover:bg-slate-50 px-6 py-2 rounded-lg border-gray-600 duration-300">
+                    <img src="./assets/asset 1.svg" alt="">
+                    <span class="font-medium">Electron Developer</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button> -->
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function handleMenu() {
+            const navDailog = document.getElementById('nav-dailog');
+            navDailog.classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>
