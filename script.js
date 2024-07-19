@@ -7,3 +7,5 @@ function handleMenu() {
   openMenu.classList.toggle("hidden");
   closeMenu.classList.toggle("hidden");
 }
+openMenu.addEventListener("click", handleMenu);
+closeMenu.addEventListener("click", handleMenu);
